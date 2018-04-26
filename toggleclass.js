@@ -1,4 +1,4 @@
-(function(el, cls) {
+function hasclass(el, cls) {
 	var el = document.querySelector('.'+el);
 	el.onclick = function() {
 		if (el.className.match(cls) == null) {
@@ -7,4 +7,5 @@
 			 el.className = el.className.replace(" "+cls, "");
 		}
 	}
-})('test-color', 'lime');
+}
+hasclass('test-color', 'lime');

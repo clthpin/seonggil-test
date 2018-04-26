@@ -1,11 +1,10 @@
-function hasclass(el, cls) {
+var hasclass = function (el, cls) {
 	var el = document.querySelector('.'+el);
 	el.onclick = function() {
-		if (el.className.match(cls) == null) {
+		if (el.className.match(cls) === null) {
 			el.className += ' '+cls;
 		} else {
 			 el.className = el.className.replace(" "+cls, "");
 		}
 	}
-}
-hasclass('test-color', 'lime');
+}('test-color', 'lime');
